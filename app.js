@@ -13,9 +13,9 @@ var express = require("express"),
     url = "http://localhost:5000/"
 
 //requiring routes
-var commentRoutes = require("./routes/comments"),
-    campgroundRoutes = require("./routes/campgrounds"),
-    indexRoutes = require("./routes/index");
+var commentRoutes = require("../yelp-camp.1/routes/comments"),
+    campgroundRoutes = require("../yelp-camp.1/routes/campgrounds"),
+    indexRoutes = require("../yelp-camp.1/routes/index");
 
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/yelp_camp";
