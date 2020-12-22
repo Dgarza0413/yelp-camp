@@ -19,22 +19,7 @@ var commentRoutes = require("./routes/comments"),
 
 
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/yelp_camp";
-mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
-
-// var mongoClient = require("mongodb").MongoClient;
-// mongoClient.connect("mongodb://7e921b38-0ee0-4-231-b9ee:shPc4Cg5rdrFbLQVLKDc7WVNiTKa2K9X8Ms50Ni03hSIDjdvWQQ38p7YCCfYd5sW3PKa4FYLc1VN1KcL5LZSLw%3D%3D@7e921b38-0ee0-4-231-b9ee.documents.azure.com:10255/?ssl=true", { useNewUrlParser: true }, function (err, client) {
-//     client.close();
-// });
-
-
-// var url = "mongodb+srv://dgarza:Utsawebdev2019!@dbcluster-29s92.mongodb.net/test?retryWrites=true"
-// mongoose.connect(url)
-//     .then(() => console.log("DB connected"))
-
-//     .catch(err => console.error(err));
-
-
-// console.log(process.env.DATABASEURL);
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
